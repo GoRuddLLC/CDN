@@ -10,4 +10,10 @@ app.get('/image/:ID', (req, res)=>
     res.sendFile(__dirname + `/images/${image_file}`);
 })
 
+app.get('/image/logo/:ID', (req, res)=>
+    {
+        let image_file = req.params.ID
+        res.sendFile(__dirname + `/images/logo/${image_file}`);
+    })
+
 app.listen(3000)
